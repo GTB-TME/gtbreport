@@ -14,7 +14,7 @@
 #'
 #' @note var_name must be one of:
 #'
-#' TB burden sstimates:
+#' TB burden estimates:
 #' "inc"    (incidence)
 #' "inch"   (HIV-positive incidence)
 #' "mort"   (mortality)
@@ -22,6 +22,14 @@
 #' Disaggregation by sex:
 #' "female"
 #' "male"
+#'
+#' Disaggregated by WHO region:
+#' "AFR"
+#' "AMR"
+#' "EMR"
+#' "SEA"
+#' "SEAR"
+#' "WPR"
 #'
 #' Treatment outcomes:
 #' "succ"   (treatment success)
@@ -55,14 +63,42 @@ palette_gtb <- function(var_name){
         "mort" = "#1D91D1",
 
         # --------------------------------------------
-        # Colours for sex-disaggregated charts
+        # Colours for sex-disaggregated charts,now based on
+        # https://apps.who.int/gho/data/design-language/design-system/colors/
         # --------------------------------------------
 
         # incidence or notifications in females: purple
-        "female" = "#951b81",
+        "female" = "#6363c0",
 
-        # incidence or notifications in males: green
-        "male" = "#80a51b",
+        # incidence or notifications in males: orange
+        "male" = "#f4a81d",
+
+        # --------------------------------------------
+        # Colours for region-disaggregated charts,now based on
+        # https://apps.who.int/gho/data/design-language/design-system/colors/
+        # --------------------------------------------
+
+        # African Region: purple
+        "afr" = "#6363c0",
+
+        # Region of the Americas: orange
+        "amr" = "#f26829",
+
+        # Eastern Mediterranean Region: light purple
+        "emr" = "#bd53bd",
+
+        # European Region: light blue
+        "eur" = "#008dc9",
+
+        # South-East Asia Region: green
+        "sea" = "#40bf73",
+
+        # South-East Asia Region: green
+        # (Second version in case code SEAR used)
+        "sear" = "#40bf73",
+
+        # Western Pacific Region: light orange
+        "wpr" = "#f4a81d",
 
         # --------------------------------------------
         # Colours for treatment outcome charts
