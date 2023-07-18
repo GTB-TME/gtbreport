@@ -100,7 +100,6 @@ palette_gtb <- function(var_name){
         # Western Pacific Region: light orange
         "wpr" = "#f4a81d",
 
-
         # --------------------------------------------
         # Colours for treatment outcome charts
         # --------------------------------------------
