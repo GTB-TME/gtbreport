@@ -36,17 +36,13 @@ GTB rounding convention:
 
 - data that cannot be calculated, either because of missing
   data, data was not requested, or any other reason are represented
-  with a dash.
-
-When the number represents thousands, show numbers between 0.01 and 0.1:
-
-- values under 0.01 are written "<0.01"
-
-- values between 0.01 and under 0.1 are rounded to
-  2 significant figures ("0.0NN")
+  with a dash, including when a number is greater than the limit
+  of 32-bit integers, i.e. 2e9.
 }
 \examples{
-ftb(348838)
-ftb(c(0.0359, 0.00036))
+ftb(3488381)
+ftb(c(12345, 987.23, 100, 15.678, 10, 3.598, 1, 0.359, 0.1, 0.036))
+ftb(NA)
+ftb(987654321987)
 
 }

@@ -1,10 +1,13 @@
 # gtbreport
-version 0.1.11
+version 0.1.12
 
-Utility functions, colour palettes and themes for the upcoming online Global TB Report.
+Utility functions, colour palettes and themes for the WHO Global Tuberculosis Report.
 
 ## Authors: 
-Philippe Glaziou, Hazim Timimi, Irwin Law
+Philippe Glaziou, Irwin Law, Hazim Timimi
+
+## Installation:
+devtools::install_github("GTB-TME/gtbreport")
 
 
 ## Examples:

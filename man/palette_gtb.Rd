@@ -18,24 +18,55 @@ Colour palettes for variables that appear in multiple charts in the
 WHO Global TB Report
 }
 \note{
-var_name must be one of:
+var_name is not case sensitve. It must be one of:
 
-TB burden sstimates:
-"inc"    (incidence)
-"inch"   (HIV-positive incidence)
-"mort"   (mortality)
+TB burden estimates:
+
+- "inc"    (incidence)
+
+- "inch"   (HIV-positive incidence)
+
+- "mort"   (mortality)
+
+
 
 Disaggregation by sex:
-"female"
-"male"
+
+- "female"
+
+- "male"
+
+
+
+Disaggregated by WHO region:
+
+- "afr"
+
+- "amr"
+
+- "emr"
+
+- "eur"
+
+- "sear"
+
+- "wpr"
+
+
 
 Treatment outcomes:
-"succ"   (treatment success)
-"fail"   (treatment failure)
-"died"   (died)
-"ltfu"   (lost to follow-up)
-"neval"  (not evaluated)
-"no_outcomes" (no outcomes data reported)
+
+- "succ"   (treatment success)
+
+- "fail"   (treatment failure)
+
+- "died"   (died)
+
+- "ltfu"   (lost to follow-up)
+
+- "neval"  (not evaluated)
+
+- "no_outcomes" (no outcomes data reported)
 }
 \examples{
 p <- ggplot2::ggplot(mtcars, aes(wt, mpg)) +

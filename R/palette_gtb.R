@@ -12,32 +12,55 @@
 #'               theme_gtb()
 #' print(p)
 #'
-#' @note var_name must be one of:
+#' @note var_name is not case sensitve. It must be one of:
 #'
 #' TB burden estimates:
-#' "inc"    (incidence)
-#' "inch"   (HIV-positive incidence)
-#' "mort"   (mortality)
+#'
+#' - "inc"    (incidence)
+#'
+#' - "inch"   (HIV-positive incidence)
+#'
+#' - "mort"   (mortality)
+#'
+#'
 #'
 #' Disaggregation by sex:
-#' "female"
-#' "male"
+#'
+#' - "female"
+#'
+#' - "male"
+#'
+#'
 #'
 #' Disaggregated by WHO region:
-#' "AFR"
-#' "AMR"
-#' "EMR"
-#' "SEA"
-#' "SEAR"
-#' "WPR"
+#'
+#' - "afr"
+#'
+#' - "amr"
+#'
+#' - "emr"
+#'
+#' - "eur"
+#'
+#' - "sear"
+#'
+#' - "wpr"
+#'
+#'
 #'
 #' Treatment outcomes:
-#' "succ"   (treatment success)
-#' "fail"   (treatment failure)
-#' "died"   (died)
-#' "ltfu"   (lost to follow-up)
-#' "neval"  (not evaluated)
-#' "no_outcomes" (no outcomes data reported)
+#'
+#' - "succ"   (treatment success)
+#'
+#' - "fail"   (treatment failure)
+#'
+#' - "died"   (died)
+#'
+#' - "ltfu"   (lost to follow-up)
+#'
+#' - "neval"  (not evaluated)
+#'
+#' - "no_outcomes" (no outcomes data reported)
 #'
 #' @import ggplot2
 #' @export
