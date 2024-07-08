@@ -1,7 +1,7 @@
 # gtbreport
-version 0.1.12
+version 0.2.0
 
-Utility functions, colour palettes and themes for the WHO Global Tuberculosis Report.
+Number formatting functions, colour palettes and ggplot2 theme for the WHO Global Tuberculosis Report the WHO Global Tuberculosis Report.
 
 ## Authors: 
 Philippe Glaziou, Irwin Law, Hazim Timimi
@@ -16,9 +16,9 @@ ftb(23456)
 
 [1] "23 500"
 
-ftb(c(0.0359, 0.00036))
+ftb(c(0.359, 0.00036))
 
-[1] "0.036" "<0.01"
+[1] "0.36" "<0.01"
 
 p <- ggplot(mtcars, aes(wt, mpg)) + geom_point() + facet_wrap(~ cyl)
 

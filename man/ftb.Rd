@@ -9,8 +9,11 @@ ftb(x)
 \arguments{
 \item{x}{vector of values}
 }
+\value{
+Vector of strings with the same length as the input
+}
 \description{
-Formats vectors of numbers (<2 billion)
+Formats vectors of numbers (<2 billion) as vectors of strings
 }
 \details{
 GTB rounding convention:
@@ -19,9 +22,7 @@ GTB rounding convention:
 
 - values under 0.1 are written "<0.1" ("<0.1")
 
-- from 0.1 to under 1 are rounded to 2
-
-  significant figures (0.NN)
+- from 0.1 to under 1 are rounded to 2 significant figures (0.NN)
 
 - from 1 to under 10 are rounded to 2 significant figures ("N.N")
 
@@ -29,14 +30,16 @@ GTB rounding convention:
 
 - 100 to under 1000 are rounded to 3 significant figures ("NNN")
 
-- 1000 upwards are rounded to 3 significant figures ("N NN0 000")
+- 1000 to under 10000 are rounded to 3 significant figures ("NNN0")
+
+- 10000 upwards are rounded to 3 significant figures, with non-breaking space as thousands separator ("NNN0 000")
 
 - data that are not reported, but could be are represented
   as empty cells and should be accompanied by a footnote.
 
 - data that cannot be calculated, either because of missing
   data, data was not requested, or any other reason are represented
-  with a dash, including when a number is greater than the limit
+  with an en-dash, including when a number is greater than the limit
   of 32-bit integers, i.e. 2e9.
 }
 \examples{
@@ -44,5 +47,8 @@ ftb(3488381)
 ftb(c(12345, 987.23, 100, 15.678, 10, 3.598, 1, 0.359, 0.1, 0.036))
 ftb(NA)
 ftb(987654321987)
+
+# Input must be numeric
+try(ftb("blah"))
 
 }

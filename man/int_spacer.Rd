@@ -3,8 +3,9 @@
 \name{int_spacer}
 \alias{int_spacer}
 \title{Round a number to the nearest integer and
-convert to a string with space as the
-thousands separator}
+convert to a string with a non-breaking space
+as the thousands separator. Do not use
+the thousands separator for numbers less than ten thousand}
 \usage{
 int_spacer(x)
 }
@@ -15,13 +16,13 @@ int_spacer(x)
 A string
 }
 \description{
-Round a number to the nearest integer and
-convert to a string with space as the
-thousands separator
+Also allows for the input to be a string containing a numeric
 }
 \examples{
-int_spacer(23.4)
+int_spacer(2.4)
+int_spacer(24.5)
 int_spacer(9876)
 int_spacer(1234567.8)
+int_spacer("123456789")
 
 }

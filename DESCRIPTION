@@ -1,14 +1,14 @@
 Package: gtbreport
 Type: Package
-Title: gtbreport utils, colour palettes and theme
-Version: 0.1.12
+Title: gtbreport numeric formatting, colour palettes and plotting theme
+Version: 0.2.0
 Authors@R: c(
-    person("Philippe", "Glaziou", email = "glazioup@who.int", role = c("aut", "cre")),
-    person("Hazim", "Timimi", email = "timimih@who.int", role = c("aut")),
-    person("Irwin", "Law", email = "lawi@who.int", role = c("aut"))
+    person("Philippe", "Glaziou", role = c("aut")),
+    person("Irwin", "Law", role = c("aut")),
+    person("Hazim", "Timimi", email = "timimih@who.int", role = c("aut", "cre"))
     )
 Maintainer: Hazim Timimi <timimih@who.int>
-Description: Colour palettes, theme and utility functions for compiling the WHO Global TB Report.
+Description: Number formatting functions, colour palettes and ggplot2 theme for building the WHO Global TB Report.
 Depends: R (>= 4.0.0),
     ggplot2 (>= 3.3.0)
 License: MIT + file LICENSE
@@ -16,4 +16,7 @@ URL: https://github.com/GTB-TME/gtbreport
 BugReports: https://github.com/GTB-TME/gtbreport/issues
 Encoding: UTF-8
 LazyData: true
-RoxygenNote: 7.2.3
+RoxygenNote: 7.3.1
+Suggests: 
+    testthat (>= 3.0.0)
+Config/testthat/edition: 3
