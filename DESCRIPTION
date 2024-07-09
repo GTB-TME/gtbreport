@@ -1,7 +1,7 @@
 Package: gtbreport
 Type: Package
-Title: gtbreport numeric formatting, colour palettes and plotting theme
-Version: 0.2.0
+Title: Numeric formatting, colour palettes and plotting theme for WHO Global TB Report
+Version: 0.2.1
 Authors@R: c(
     person("Philippe", "Glaziou", role = c("aut")),
     person("Irwin", "Law", role = c("aut")),

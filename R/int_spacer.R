@@ -1,9 +1,9 @@
-#' Round a number to the nearest integer and
-#' convert to a string with a non-breaking space
-#' as the thousands separator. Do not use
-#' the thousands separator for numbers less than ten thousand
+#' Round a number to the nearest integer and format according to WHO style guide
 #'
-#' Also allows for the input to be a string containing a numeric
+#' Round a number to the nearest integer and format according to WHO style guide.
+#' This means using non-breaking spaces as thousands separators, but don;t do that
+#' for numbers between 1000 and 9999
+#'
 #'
 #'
 #' @param x A number to be rounded and spaced
@@ -13,25 +13,21 @@
 #' int_spacer(24.5)
 #' int_spacer(9876)
 #' int_spacer(1234567.8)
-#' int_spacer("123456789")
+#' int_spacer(c(123456, 7890123))
 #'
 #' @export
 #'
 int_spacer <- function(x) {
 
-  #If input is a string containing a number (including decimal point if present),
-  #convert it to numeric
+  stopifnot("Input must be numeric!" = !is.character(x))
 
-  if (!is.na(x) & !is.numeric(x) & grepl("^[[:digit:]|.]+$", x) == TRUE) {
-    x <- as.numeric(x)
-  }
-
-
-  ifelse(is.na(x) | !is.numeric(x),
+  ifelse(is.na(x),
          NA,
          ifelse(round(x, 0) < 1e4,
                 formatC(round(x, 0), big.mark = "", format = "d"),
                 formatC(round(x, 0), big.mark = " ", format = "d")
-                )
          )
+  )
+
 }
+

@@ -1,5 +1,5 @@
 # gtbreport
-version 0.2.0
+version 0.2.1
 
 Number formatting functions, colour palettes and ggplot2 theme for the WHO Global Tuberculosis Report the WHO Global Tuberculosis Report.
 

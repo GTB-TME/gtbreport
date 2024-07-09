@@ -68,3 +68,10 @@ test_that("Returning values from 1e4 to <2e9 as N NN0 000 (3 sig figs, with non-
 
 })
 
+test_that("Vectorization works", {
+  expect_equal(ftb(c(NA, 2.01e9, -0.0, 0.0949, 0.994, 9.949, 99.49, 999.49, 9994, 1.999e9)),
+               c("–", "–", "0", "<0.1", "0.99", "9.9", "99", "999", "9990", "2 000 000 000")
+               )
+
+})
+
